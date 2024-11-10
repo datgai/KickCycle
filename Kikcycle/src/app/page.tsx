@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 import { signOut, useSession } from 'next-auth/react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { setAuth, clearAuth } from '../slices/authSlice';
 import styles from './page.module.css';
@@ -27,9 +27,12 @@ const HomePage = () => {
   }, [session, dispatch]);
 
   return (
-    <div className={styles.homeContainer}>
-      <h1 className={styles.greeting}>Hello, {isAuthenticated ? session?.user?.name : 'Guest'}!</h1>
-      <h1 className='text-[100px]' >1000 Pts</h1>
+    <div className={styles.home}>
+      <main className={styles.hero}>test</main>
+      <h1 className={styles.greeting}>
+        Hello, {isAuthenticated ? session?.user?.name : 'Guest'}!
+      </h1>
+      <h1 className="text-[100px]">1000 Pts</h1>
       <p>KikPoints can be used to redeem...</p>
       <p className={styles.info}>
         {isAuthenticated
