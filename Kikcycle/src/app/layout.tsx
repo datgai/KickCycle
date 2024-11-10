@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import React from 'react';
 
 export const metadata = {
-  title: 'My Next.js App',
+  title: 'KikCycle',
   description: 'Next.js with NextAuth and Redux',
 };
 

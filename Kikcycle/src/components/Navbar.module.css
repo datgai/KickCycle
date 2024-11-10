@@ -1,4 +1,5 @@
 .navbar {
+  z-index: 10;
   position: sticky;
   top: 0;
   width: 100vw;
@@ -70,12 +71,11 @@
   }
 
   .navbar__menu {
-    /* display: none; */
-    z-index: -1;
+    z-index: 9;
     position: absolute;
     background-color: var(--main);
     width: 80vw;
-    left: 0;
+    left: -100vw;
     top: 4rem;
     height: 100vh;
     padding: 1rem;
@@ -90,6 +90,6 @@
 
   .navbar__hamburger:has(input:checked) + .navbar__menu {
     display: flex;
-    left: -100vw;
+    left: 0;
   }
 }
