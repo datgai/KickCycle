@@ -10,7 +10,7 @@
   align-items: center;
   color: var(--secondary);
   font-family: 'Mochiy Pop One', cursive;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .navbar__hamburger {

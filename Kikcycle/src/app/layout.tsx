@@ -1,7 +1,7 @@
 import Providers from '@/components/Providers';
 import './globals.css';
 import { Mochiy_Pop_One, Poppins } from 'next/font/google';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Navbar/Navbar';
 import React from 'react';
 
 export const metadata = {

@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { setAuth, clearAuth } from '../slices/authSlice';
 import styles from './page.module.css';
+import MyMap from '../components/Map/Map';
 
 const HomePage = () => {
   const { data: session } = useSession();
@@ -50,6 +51,10 @@ const HomePage = () => {
           src="/testVideo.mp4"
         ></video>
       </main>
+      <div className={styles.map__content}>
+        <h1>The nearest KikCycle booths!</h1>
+        <MyMap></MyMap>
+      </div>
       <h1 className={styles.greeting}>
         Hello, {isAuthenticated ? session?.user?.name : 'Guest'}!
       </h1>
