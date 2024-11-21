@@ -1,10 +1,11 @@
-"use client";
+'use client';
 
 import { signOut, useSession } from 'next-auth/react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { setAuth, clearAuth } from '../slices/authSlice';
 import styles from './page.module.css';
+import MyMap from '../components/Map/Map';
 
 const HomePage = () => {
   const { data: session } = useSession();
@@ -27,9 +28,37 @@ const HomePage = () => {
   }, [session, dispatch]);
 
   return (
-    <div className={styles.homeContainer}>
-      <h1 className={styles.greeting}>Hello, {isAuthenticated ? session?.user?.name : 'Guest'}!</h1>
-      <h1 className='text-[100px]' >1000 Pts</h1>
+    <div className={styles.home}>
+      <main className={styles.hero}>
+        <div className={styles.hero__content}>
+          <div className={styles.hero__content__brand}>
+            <img src="/logo.svg" alt="Logo" />
+            <h1>KikCycle</h1>
+          </div>
+          <h1 className={styles.hero__content__tagline}>
+            From old shoes to collectibles
+          </h1>
+          <div className={styles.hero__content__search}>
+            <img src="/kik.svg" alt="Kik" />
+            <input type="text" placeholder="Look up products..." />
+          </div>
+        </div>
+        <video
+          autoPlay
+          muted
+          loop
+          id={styles.hero__video}
+          src="/testVideo.mp4"
+        ></video>
+      </main>
+      <div className={styles.map__content}>
+        <h1>The nearest KikCycle booths!</h1>
+        <MyMap></MyMap>
+      </div>
+      <h1 className={styles.greeting}>
+        Hello, {isAuthenticated ? session?.user?.name : 'Guest'}!
+      </h1>
+      <h1 className="text-[100px]">1000 Pts</h1>
       <p>KikPoints can be used to redeem...</p>
       <p className={styles.info}>
         {isAuthenticated
