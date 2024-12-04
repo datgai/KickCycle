@@ -1,21 +1,16 @@
 .home {
 }
 
-.hero {
+.profile {
   position: relative;
-  height: 80vh;
+  height: 40vh;
   background-color: var(--main);
   overflow: hidden;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
-#hero__video {
-  max-width: 1000%;
-  display: inline;
-  height: auto;
-  width: 100%;
-}
-
-.hero__content {
+.profile__content {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -29,36 +24,6 @@
   justify-content: center;
   font-family: 'Mochiy Pop One', cursive;
   color: var(--secondary);
-}
-
-.hero__content__brand {
-  width: 128px;
-}
-
-.hero__content__brand h1 {
-  font-size: 24px;
-  font-family: inherit;
-}
-
-.hero__content__tagline {
-  font-size: 20px;
-  font-family: inherit;
-}
-
-.hero__content__search {
-  font-family: inherit;
-  margin: 1rem;
-}
-
-.hero__content__search input {
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  box-shadow: hsla(0, 0%, 0%, 20%) 0px 4px;
-  color: var(--text-2);
-}
-
-.hero__content__search input:focus {
-  outline: none;
 }
 
 .map__content {
@@ -82,7 +47,7 @@
 
 .greeting {
   font-size: 2.5rem;
-  color: #023570;
+  color: var(--secondary);
   margin-bottom: 1rem;
   font-family: 'Mochiy Pop One', cursive;
 }
@@ -97,8 +62,8 @@
 .signOutButton {
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  background-color: #023570;
-  color: white;
+  background-color: var(--secondary);
+  color: var(--main);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -124,12 +89,4 @@
 .loginLink:hover {
   background-color: #023570;
   color: white;
-}
-
-@media screen and (max-width: 640px) {
-  #hero__video {
-    margin-left: -25%;
-    height: 60%;
-    width: auto;
-  }
 }

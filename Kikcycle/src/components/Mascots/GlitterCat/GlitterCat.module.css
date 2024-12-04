@@ -1,0 +1,26 @@
+.mascot__GlitterCat {
+  background: url('/Mascots/GlitterCat.png');
+  --display_size: 200px;
+  --y-offset: calc(var(--display_size) / 2);
+  /* position: absolute;
+  bottom: 0; */
+  width: var(--display_size);
+  height: var(--display_size);
+  background-size: 200px 400px;
+  animation: Animation__GlitterCat--idle 0.5s infinite;
+}
+
+@keyframes Animation__GlitterCat--idle {
+  0% {
+    background-position: 0px 0px;
+  }
+  49% {
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 0px calc(var(--y-offset) + 100px);
+  }
+  100% {
+    background-position: 0px calc(var(--y-offset) + 100px);
+  }
+}

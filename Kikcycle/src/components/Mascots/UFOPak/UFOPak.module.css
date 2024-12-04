@@ -1,0 +1,92 @@
+.mascot__UFOPak {
+  z-index: 100;
+  background: url('/Mascots/UFOPak.png');
+  --display_size: 200px;
+  --y-offset: calc(var(--display_size) / 2);
+  position: absolute;
+  top: 500px;
+  width: var(--display_size);
+  height: var(--display_size);
+  background-size: 200px 400px;
+  animation:
+    /* Animation__UFOPak--idle 0.5s infinite, */ Animation__UFOPak--walk
+    18s infinite;
+}
+
+@keyframes Animation__UFOPak--idle {
+  0% {
+    background-position: 0px 0px;
+  }
+  49% {
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 0px calc(var(--y-offset) + 100px);
+  }
+  100% {
+    background-position: 0px calc(var(--y-offset) + 100px);
+  }
+}
+
+@keyframes Animation__UFOPak--walk {
+  0% {
+    transform: scaleX(1);
+    left: 0%;
+  }
+  10% {
+    transform: scaleX(1);
+    left: 40%;
+  }
+  20% {
+    transform: scaleX(1);
+    left: 60%;
+  }
+  21% {
+    transform: scaleX(-1);
+    left: 60%;
+  }
+  30% {
+    transform: scaleX(-1);
+    left: 40%;
+  }
+  40% {
+    transform: scaleX(-1);
+    left: 0%;
+  }
+  50% {
+    transform: scaleX(-1);
+    left: 0%;
+  }
+  60% {
+    transform: scaleX(-1);
+    left: -20%;
+  }
+  61% {
+    transform: scaleX(1);
+    left: -20%;
+  }
+  70% {
+    transform: scaleX(1);
+    left: -15%;
+  }
+  80% {
+    transform: scaleX(1);
+    left: 15%;
+  }
+  81% {
+    transform: scaleX(-1);
+    left: 15%;
+  }
+  90% {
+    transform: scaleX(-1);
+    left: 10%;
+  }
+  99% {
+    transform: scaleX(-1);
+    left: 0%;
+  }
+  100% {
+    transform: scaleX(1);
+    left: 0%;
+  }
+}

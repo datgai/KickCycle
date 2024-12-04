@@ -1,0 +1,21 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Mochiy Pop One', cursive;
+  padding: 1rem;
+}
+
+.products__title {
+  text-align: center;
+  font-family: inherit;
+  color: var(--main);
+  font-size: 2rem;
+}
+
+.products__list {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
