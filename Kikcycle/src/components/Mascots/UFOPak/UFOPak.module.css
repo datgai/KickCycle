@@ -1,5 +1,5 @@
 .mascot__UFOPak {
-  z-index: 100;
+  z-index: 2;
   background: url('/Mascots/UFOPak.png');
   --display_size: 200px;
   --y-offset: calc(var(--display_size) / 2);

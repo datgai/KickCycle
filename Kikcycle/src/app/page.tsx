@@ -28,7 +28,7 @@ const HomePage = () => {
       );
     } else if (status === 'unauthenticated') {
       dispatch(clearAuth());
-      router.push('/landing');
+      // router.push('/landing');
     }
   }, [session, dispatch, router]);
 
