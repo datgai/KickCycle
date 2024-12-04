@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Navbar.module.css';
+import LoginButton from '../LoginButton/LoginButton';
 
 const Navbar = () => {
   return (
@@ -24,13 +25,13 @@ const Navbar = () => {
       <div className={styles.navbar__menu}>
         <menu>
           <li>
+            <a href="/landing">About Us</a>
+          </li>
+          <li>
             <a href="/products">Products</a>
           </li>
           <li>
-            <a href="/login">Login</a>
-          </li>
-          <li>
-            <a href="/">About Us</a>
+            <LoginButton></LoginButton>
           </li>
         </menu>
       </div>

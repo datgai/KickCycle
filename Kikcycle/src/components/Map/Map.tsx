@@ -35,11 +35,11 @@ const MyMap: React.FC = () => {
           setUserPosition([latitude, longitude]);
         },
         (error) => {
-          console.error('Error retrieving user location:', error);
+          console.log(`Error retrieving user location : ${error.message}`);
         }
       );
     } else {
-      console.error('Geolocation is not supported by this browser.');
+      console.log('Geolocation is not supported by this browser.');
     }
   }, []);
 

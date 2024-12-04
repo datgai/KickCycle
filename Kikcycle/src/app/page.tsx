@@ -5,15 +5,17 @@ import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks';
 import { setAuth, clearAuth } from '../slices/authSlice';
 import styles from './page.module.css';
-import MyMap from '../components/Map/Map';
+import { useRouter } from 'next/navigation';
+import Map from '../components/Map/Map';
 
 const HomePage = () => {
-  const { data: session } = useSession();
+  const router = useRouter();
+  const { data: session, status } = useSession();
   const dispatch = useAppDispatch();
   const isAuthenticated = useAppSelector((state) => state.auth.isAuthenticated);
 
   useEffect(() => {
-    if (session && session.user) {
+    if (session && session.user && status === 'authenticated') {
       dispatch(
         setAuth({
           id: session.user.id || '',
@@ -22,58 +24,30 @@ const HomePage = () => {
           image: session.user.image || null,
         })
       );
-    } else {
+    } else if (status === 'unauthenticated') {
       dispatch(clearAuth());
+      router.push('/landing');
     }
-  }, [session, dispatch]);
+  }, [session, dispatch, router]);
 
   return (
     <div className={styles.home}>
-      <main className={styles.hero}>
-        <div className={styles.hero__content}>
-          <div className={styles.hero__content__brand}>
-            <img src="/logo.svg" alt="Logo" />
-            <h1>KikCycle</h1>
-          </div>
-          <h1 className={styles.hero__content__tagline}>
-            From old shoes to collectibles
+      <main className={styles.profile}>
+        <div className={styles.profile__content}>
+          {' '}
+          <h1 className={styles.greeting}>
+            Hello, {isAuthenticated ? session?.user?.name : 'Guest'}!
           </h1>
-          <div className={styles.hero__content__search}>
-            <img src="/kik.svg" alt="Kik" />
-            <input type="text" placeholder="Look up products..." />
-          </div>
+          <h1 className="text-[60px]">1000 Pts</h1>
+          <button className={styles.signOutButton} onClick={() => signOut()}>
+            Redeem Points
+          </button>
         </div>
-        <video
-          autoPlay
-          muted
-          loop
-          id={styles.hero__video}
-          src="/testVideo.mp4"
-        ></video>
       </main>
       <div className={styles.map__content}>
         <h1>The nearest KikCycle booths!</h1>
-        <MyMap></MyMap>
+        <Map></Map>
       </div>
-      <h1 className={styles.greeting}>
-        Hello, {isAuthenticated ? session?.user?.name : 'Guest'}!
-      </h1>
-      <h1 className="text-[100px]">1000 Pts</h1>
-      <p>KikPoints can be used to redeem...</p>
-      <p className={styles.info}>
-        {isAuthenticated
-          ? 'You are logged in. Enjoy exploring!'
-          : 'Please log in to access more features.'}
-      </p>
-      {isAuthenticated ? (
-        <button className={styles.signOutButton} onClick={() => signOut()}>
-          Sign Out
-        </button>
-      ) : (
-        <a href="/login" className={styles.loginLink}>
-          Go to Login
-        </a>
-      )}
     </div>
   );
 };
