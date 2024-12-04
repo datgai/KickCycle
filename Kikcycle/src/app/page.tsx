@@ -6,7 +6,9 @@ import { useAppDispatch, useAppSelector } from '../hooks';
 import { setAuth, clearAuth } from '../slices/authSlice';
 import styles from './page.module.css';
 import { useRouter } from 'next/navigation';
-import Map from '../components/Map/Map';
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('../components/Map/Map'), { ssr: false });
 
 const HomePage = () => {
   const router = useRouter();
