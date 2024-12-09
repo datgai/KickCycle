@@ -32,61 +32,76 @@
   0% {
     transform: scaleX(1);
     left: 0%;
+    top: 10%;
   }
   10% {
     transform: scaleX(1);
     left: 40%;
+    top: 16%;
   }
   20% {
     transform: scaleX(1);
     left: 60%;
+    top: 16%;
   }
   21% {
     transform: scaleX(-1);
     left: 60%;
+    top: 16%;
   }
   30% {
     transform: scaleX(-1);
     left: 40%;
+    top: 12%;
   }
   40% {
     transform: scaleX(-1);
     left: 0%;
+    top: 10%;
   }
   50% {
     transform: scaleX(-1);
     left: 0%;
+    top: 12%;
   }
   60% {
     transform: scaleX(-1);
     left: -20%;
+    top: 5%;
   }
   61% {
     transform: scaleX(1);
     left: -20%;
+    top: 5%;
   }
   70% {
     transform: scaleX(1);
     left: -15%;
+    top: 16%;
   }
   80% {
     transform: scaleX(1);
     left: 15%;
+    top: 16%;
   }
   81% {
     transform: scaleX(-1);
     left: 15%;
+    top: 16%;
   }
   90% {
     transform: scaleX(-1);
     left: 10%;
+    top: 12%;
   }
   99% {
     transform: scaleX(-1);
     left: 0%;
+    top: 10%;
   }
   100% {
     transform: scaleX(1);
     left: 0%;
+    top: 10%;
   }
 }

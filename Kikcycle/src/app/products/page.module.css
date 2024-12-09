@@ -13,9 +13,7 @@
 }
 
 .products__list {
-  margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(80vw, 420px), 1fr));
   gap: 2rem;
 }

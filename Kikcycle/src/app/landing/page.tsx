@@ -32,8 +32,26 @@ const HomePage = () => {
         ></video>
       </main>
       <div className={styles.about}>
-        KikCycle is about...
+        <div className={styles.about__problem}>
+          <h1>Did you know?</h1>
+          <span className={styles.about__problem__highlight}>91%</span>
+          <p>of the plastic waste generated in the world is not recycled.</p>
+          {/* <img src="/OECD.png" alt="Plastic waste" /> */}
+        </div>
         <UFOCat></UFOCat>
+        <div className={styles.about__solution}>
+          <div className={styles.about__solution__brand}>
+            <img src="/logo.svg" alt="Logo" />
+            <h1>KikCycle</h1>
+          </div>
+          <p>
+            Aims to solve the problem of{' '}
+            <b>
+              Low recyclability of PVC waste which often ends up in landfills
+            </b>
+          </p>
+          <img src="/KikcycleSolution.png" alt="Solution" />
+        </div>
       </div>
     </div>
   );
