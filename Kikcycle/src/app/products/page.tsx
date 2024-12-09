@@ -110,6 +110,66 @@ const ProductPage = () => {
             />
           </div>
         </ProductItem>
+        <ProductItem ItemName="Stonks Pak Keychain" ItemPrice="MYR 17.00">
+          <div
+            style={{
+              width: '400px',
+              height: '200px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <img
+              src="/Mascots/StonksPak.png"
+              alt="Stonks Pak"
+              style={{
+                width: '200px',
+                height: '200px',
+              }}
+            />
+          </div>
+        </ProductItem>
+        <ProductItem ItemName="Muscle Kik Keychain" ItemPrice="MYR 17.00">
+          <div
+            style={{
+              width: '400px',
+              height: '200px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <img
+              src="/Mascots/MuscleCat.png"
+              alt="Muscle Kik"
+              style={{
+                width: '200px',
+                height: '200px',
+              }}
+            />
+          </div>
+        </ProductItem>
+        <ProductItem ItemName="Leaf Pak Keychain" ItemPrice="MYR 17.00">
+          <div
+            style={{
+              width: '400px',
+              height: '200px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <img
+              src="/Mascots/LeafPak.png"
+              alt="Leaf Pak"
+              style={{
+                width: '200px',
+                height: '200px',
+              }}
+            />
+          </div>
+        </ProductItem>
       </div>
     </div>
   );
